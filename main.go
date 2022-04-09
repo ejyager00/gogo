@@ -21,9 +21,14 @@ func main() {
 	fmt.Println("Input moves with two integers separated by a space representing x and y respectively.")
 	fmt.Println("To pass, input -1 and to resign input -2.")
 
-	game := NewGame(13, 3.5)
-	gameover := false
+	var s int
+	var k float32
+	fmt.Print("Input board size and komi (white advantage) separated by a space: ")
+	fmt.Scanf("%d %f", &s, &k)
 
+	game := NewGame(s, k)
+
+	gameover := false
 	for !gameover {
 		game.PrintBoard()
 		if game.turn == 1 {
