@@ -1,3 +1,3 @@
 module github.com/ejyager00/gogo
 
-go 1.18
+go 1.23
